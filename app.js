@@ -37,16 +37,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-var result = multiply(a + b);
+var result = a*b;
 var array = [result];
 console.log(array);
 
-array[1] = 'the sum of ' + a + ' and ' + b +' is ' + result + ' . '
-return array
+array[1] = 'The product of ' + a + ' and ' + b +' is ' + result + '.'
+return array;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -63,11 +63,27 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+    var array =[];
+    
+    var abSum = sum(a, b)[0];
+    var abProduct = multiply(a, b)[0];
+   
 
+    var resultSum = sum(abSum, c)[0]
+    array.push(resultSum);
+    
+    var resultProduct = (multiply(abProduct, c))[0]
+
+    array.push(resultProduct);
+    
+    
+    array[2] = a + ' and ' + b + ' and ' + c + ' sum to ' + resultSum + '.'
+    array[3] = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is '+ resultProduct + '.'
+    return array;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -84,11 +100,30 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumArray(sumArr) {
 
+    var sumArray = [a, b, c] (sum, 0);
+    var absum = sum[a, b]
+    var resultSum = sum[absum, c]
+    var array = [resultSum]
+    
+    
+    console.log(sum);
+
+    array[1] = [a + b + c] + 'was passed in as an array of numbers, and ' + resultSum +' is their sum.'
+    return array;
 }
+
+
+
+/*
+    var absum = (a, b)[0]
+    var resultSum = sum(absum, c)[0]
+console.log(array)
+*/
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray([2, 3, 4]);
+//testSumArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -103,7 +138,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+/*function multiplyArray(multArr) {
+var multiplyArray = [a, b, c]
+var abProduct = multiply[a, b]
+var resultProduct = multiply[abProduct, c]
+console.log(multiplyArray)
+
 
 }
 
@@ -130,7 +170,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyAnyArray(dynamicArray) {
-
+multiply()
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
